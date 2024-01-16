@@ -1,0 +1,13 @@
+# config/database.yml
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  username: postgres
+  password: 6242
+  pool: 5
+
+development:
+  <<: *default
+  database: hello_rails_back_end_development
