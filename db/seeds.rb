@@ -7,3 +7,24 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+# db/seeds.rb
+
+# Delete existing records
+Message.destroy_all
+
+# Create new records
+messages = [
+  { content: 'Hello, World!' },
+  { content: 'Greetings from Rails!' },
+  { content: 'Welcome to the Hello World app!' },
+  { content: 'Howdy! Enjoy your time here.' },
+  { content: 'Hola, amigos!' }
+]
+
+messages.each do |message|
+  Message.create(message)
+end
+
+puts 'Seeds planted successfully!'
+
